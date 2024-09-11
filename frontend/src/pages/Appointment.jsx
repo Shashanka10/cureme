@@ -131,13 +131,13 @@ const Appointment = () => {
                       : "border-gray-400 border"
                   }`}
                 >
-                  <p>{item[0] && daysOfWeek[item[0].datetime.getDay()]}</p>
-                  <p>{item[0] && item[0].datetime.getDate()}</p>
+                  <p>{daysOfWeek[(new Date().getDay() + index) % 7]}</p>
+                  <p>{new Date().getDate() + index}</p>
                 </div>
               ))}
           </div>
           <div className="flex items-center gap-3 overflow-x-scroll">
-            {docSlots.length &&
+          {docSlots.length && docSlots[slotIndex].length > 0 ? (
               docSlots[slotIndex].map((item, index) => (
                 <p
                   key={index}
@@ -150,7 +150,10 @@ const Appointment = () => {
                 >
                   {item.time.toLowerCase()}
                 </p>
-              ))}
+              ))
+            ) : (
+              <p className="text-gray-500">Slots not available</p> // This will show if no slots are available
+            )}
           </div>
           <div className="mt-4">
             <button className="bg-secondary text-white text-base font-semibold px-8 py-4 rounded-full hover:scale-x-105 hover:text-gray-200 transition-all duration-500">
