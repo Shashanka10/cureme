@@ -10,7 +10,7 @@ const TopDoctors = () => {
   return (
     <div className='flex flex-col items-center gap-5 text-gray-800 py-12 md:mx-10'>
       <h1 className='text-3xl font-medium'>Top Doctors to Book</h1>
-      <p className='text-wrap sm:w-1/3 text-center text-base font-normal'>Browse through our extensive list of trusted doctors.</p>
+      <p className='text-wrap text-center text-base font-normal'>Browse through our extensive list of trusted doctors.</p>
       <div className='flex items-center flex-wrap gap-10 mt-4 justify-center '>
         {doctors.slice(0,10).map((item,index)=>(
           <div 

@@ -23,8 +23,8 @@ const Doctors = () => {
 
   return (
     <div>
-      <p className="text-gray-500 pb-4 text-xl font-medium text-center">Browse through the doctors specialist.</p>
-      <div className="flex flex-col sm:flex-row items-start gap-12 mt-5">
+      <p className="text-gray-500 pb-4 text-lg md:text-xl font-medium text-center">Browse through the doctors specialist.</p>
+      <div className="flex flex-col items-center lg:flex-row md:items-start gap-12 mt-5">
         <div className="flex flex-col text-wrap gap-2 md:gap-4 text-sm md:text-lg text-gray-600">
           <p onClick={()=> speciality === 'General physician' ? navigate('/doctors'): navigate('/doctors/General physician') } className={`pl-3 py-1.5 md:py-2 pr-16 border-2 border-secondary rounded-lg transition-all cursor-pointer hover:scale-105 delay-100 ${speciality === "General physician" ? "bg-secondary border-secondary text-white" : ""}`}>General Physician</p>
           <p onClick={()=> speciality === 'Gynecologist' ? navigate('/doctors'): navigate('/doctors/Gynecologist') } className={`pl-3 py-1.5 md:py-2 pr-16 border-2 border-secondary rounded-lg transition-all cursor-pointer hover:scale-105 delay-100 ${speciality === "Gynecologist" ? "bg-secondary border-secondary text-white" : ""}`}>Gynecologist</p>
